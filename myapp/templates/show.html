@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Details</title>
+    <link rel="stylesheet" href="{% static 'app.css' %}">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>{{ product.name }}</h1>
+    </div>
+</header>
+<div class="container">
+    <p>Price: ${{ product.price }}</p>
+    <p>Description: {{ product.description }}</p>
+
+    <a href="{% url 'index' %}" class="btn-back">Back to Products</a>
+</div>
+</body>
+</html>
